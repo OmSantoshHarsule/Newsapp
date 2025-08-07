@@ -13,7 +13,7 @@ export class News extends Component {
   }
   
   async componentDidMount(){
-    let url= `https://newsapi.org/v2/top-headlines?country=in&apiKey=3618f597ab104388a7fff5ca64b8f6cd&page=1&pageSize=${this.props.pageSize}`;
+    let url= `https://newsapi.org/v2/everything?q=tesla&from=2025-07-07&sortBy=publishedAt&apiKey=3618f597ab104388a7fff5ca64b8f6cd&page=1&pageSize=${this.props.pageSize}`;
     this.setState({loading:true});
     let data = await fetch(url);
     let parsedData = await data.json()
